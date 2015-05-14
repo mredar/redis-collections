@@ -14,4 +14,4 @@ from .sets import Set  # NOQA
 from .lists import List  # NOQA
 from .dicts import Dict # NOQA
 if sys.version_info[:2] > (2, 6):
-    import Counter
+    from .dicts import Counter
