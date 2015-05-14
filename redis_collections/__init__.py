@@ -7,8 +7,11 @@ __license__ = 'ISC'
 __copyright__ = 'Copyright 2013 Honza Javorek'
 
 
+import sys
 from .base import RedisCollection  # NOQA
 
 from .sets import Set  # NOQA
 from .lists import List  # NOQA
-from .dicts import Dict, Counter  # NOQA
+from .dicts import Dict # NOQA
+if sys.version_info[:2] > (2, 6):
+    import Counter
